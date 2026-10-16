@@ -1,0 +1,4 @@
+Dự án: Local Model Manager — app desktop dùng Tauri, React + TypeScript ở giao diện, Rust ở phần native. Mục tiêu: tải model GGUF có thanh tiến trình, kiểm tra SHA-256, xem dung lượng ổ đĩa, chạy thử llama-server.
+Quy tắc làm việc: Phần Rust cơ bản — ownership, Result, các command — tôi tự viết tay để học. Agent chỉ hỗ trợ dựng khung, cài thư viện, sửa lỗi môi trường và build. Đừng viết thay phần logic chính.
+Ưu tiên: Release pipeline quan trọng hơn tính năng. Thiếu thời gian thì cắt tính năng, không cắt phần build và auto-update.
+Môi trường: Máy Windows, dùng WSL2 và máy ảo Ubuntu để test gói Linux. Không có máy Mac — build macOS qua GitHub Actions.
