@@ -5,7 +5,6 @@ use sysinfo::Disks;
 
 #[tauri::command]
 pub fn get_disk_space() -> Result<u64, String> {
-    //  Err("test error".to_string())
     let disks = Disks::new_with_refreshed_list();
     let disk = disks.list().first().ok_or("No disks found".to_string())?;
     Ok(disk.available_space())
